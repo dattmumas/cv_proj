@@ -16,12 +16,12 @@ export default function Home() {
               <CardDescription>Tech and Product Connosieur</CardDescription>
               <CardContent>
                 <p className="text-md text-">
-                  I am a finance and accounting expert with a passion for business development, culture, and startups. I have a wealth of experience in finance, accounting, tech, CPG, data, business intelligence, and am a USMC veteran. 
+                I am a finance and accounting expert with a passion for business development, culture, and startups. With deep experience in finance, accounting, tech, CPG, data, and business intelligence, I specialize in driving results for venture-backed companies. As a USMC veteran, I bring a strategic, disciplined approach to problem-solving. 
                 </p>
               </CardContent>
               <CardContent>
                 <p>
-                  I also have a deep passion for software and product development. Please continue to see the products I have developed with the Venture Capital space in mind.
+                I’m also passionate about software and product development, as a self-taught software developer I have developed several of my own projects over the years. Please explore the products I’ve developed with startups and investors in mind.
                 </p>
               </CardContent>
               <Button asChild variant='outline'>

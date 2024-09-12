@@ -13,7 +13,7 @@ export default function Navbar() {
     <div className="flex flex-row gap-4 m-3 items-center">
       <div className="text-center w-25">
         <Link href="/">
-            <h1 className="font-mono text-lg">Matthew Dumas, MBA</h1>
+            <h1 className="font-mono font-bold text-lg">Matthew Dumas</h1>
         </Link>
       </div>
       <div>
