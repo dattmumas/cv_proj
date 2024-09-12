@@ -6,21 +6,20 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 
 const companyFields = [
-    { id: "companyName", label: "Company Name", type: "text", required: true },
-    { id: "industry", label: "Industry", type: "text", required: true },
-    { id: "stage", label: "Stage", type: "text", required: true },
-    { id: "status", label: "Status", type: "text", required: true },
-    { id: "firstContactDate", label: "First Contact Date", type: "date", required: true },
-    { id: "lastContactDate", label: "Last Contact Date", type: "date", required: true },
-    { id: "description", label: "Description", type: "text", required: false },
-  ];
-  
+  { id: "companyname", label: "Company Name", type: "text", required: true },
+  { id: "industry", label: "Industry", type: "text", required: true },
+  { id: "stage", label: "Stage", type: "text", required: true },
+  { id: "status", label: "Status", type: "text", required: true },
+  { id: "firstcontactdate", label: "First Contact Date", type: "date", required: true },
+  { id: "lastcontactdate", label: "Last Contact Date", type: "date", required: true },
+  { id: "description", label: "Description", type: "text", required: false },
+];
 
 export default function CompanyForm({ company }: { company: leadCompany }) {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm<leadCompany>();
 
   // Handle form submission
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: leadCompany) => {
     try {
       const response = await createCompanyLead(data);
       console.log(response);
@@ -36,11 +35,13 @@ export default function CompanyForm({ company }: { company: leadCompany }) {
           <input
             id={field.id}
             type={field.type}
-            {...register(field.id, { required: field.required ? `${field.label} is required` : false })}
-            defaultValue={(company as any)?.[field.id] || ''}
+            {...register(field.id as keyof leadCompany, { required: field.required ? `${field.label} is required` : false })}
+            defaultValue={company?.[field.id as keyof leadCompany] || ''}
             placeholder={`Enter ${field.label.toLowerCase()}`}
           />
-          {errors[field.id] && <p>{(errors as any)?.[field.id]?.message}</p>}
+          {errors[field.id as keyof leadCompany] && (
+            <p>{errors[field.id as keyof leadCompany]?.message?.toString()}</p>
+          )}
         </div>
       ))}
 

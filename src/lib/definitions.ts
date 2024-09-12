@@ -1,11 +1,11 @@
 export type leadCompany = {
     id: number;
-    companyName: string;
+    companyname: string;
     industry: string;
     stage: 'Pre-Seed' | 'Seed' | 'Series A' | 'Series B' | 'Series C +' | 'Mezzanine' | 'Exit';
     status: 'open' | 'contacted' | 'closed'| 'cold';
-    firstContactDate: string;
-    lastContactDate: string;
+    firstcontactdate: string;
+    lastcontactdate: string;
     description: string;
 }
 

@@ -3,12 +3,12 @@
 import { sql } from '@vercel/postgres';
 
 type CompanyLeadData = {
-    companyName: string;
+    companyname: string;
     industry: string;
     stage: 'Pre-Seed' | 'Seed' | 'Series A' | 'Series B' | 'Series C +' | 'Mezzanine' | 'Exit';
     status: 'open' | 'contacted' | 'closed'| 'cold';
-    firstContactDate: string;
-    lastContactDate: string;
+    firstcontactdate: string;
+    lastcontactdate: string;
     description: string;
 }
 
@@ -18,7 +18,7 @@ export const createCompanyLead = async ( data: CompanyLeadData ) => {
             INSERT INTO leadCompany (
                 companyName, industry, stage, status, firstContactDate, lastContactDate, description
             ) VALUES (
-                ${data.companyName}, ${data.industry}, ${data.stage}, ${data.status}, ${data.firstContactDate}, ${data.lastContactDate}, ${data.description}
+                ${data.companyname}, ${data.industry}, ${data.stage}, ${data.status}, ${data.firstcontactdate}, ${data.lastcontactdate}, ${data.description}
             )
         `;
     } catch (error) {
