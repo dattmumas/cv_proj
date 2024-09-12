@@ -1,5 +1,5 @@
 import { sql } from "@vercel/postgres";
-import { leadCompany, leadFounder, leadInvestor } from "./definitions";
+import { leadCompany } from "./definitions";
 
 export async function fetchCompany() {
         const data = await sql<leadCompany>`SELECT * FROM leadCompany`;

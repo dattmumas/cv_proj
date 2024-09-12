@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar";
-import { leadCompany, leadFounder, leadInvestor } from "@/lib/definitions";
+import { leadCompany } from "@/lib/definitions";
 import { fetchCompany } from "@/lib/data";
 
 
