@@ -14,7 +14,7 @@ export default async function LeadManager() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Name</TableHead>
+              <TableHead>Company</TableHead>
               <TableHead>Last Contact</TableHead>
               <TableHead>Stage</TableHead>
               <TableHead>Industry</TableHead>
@@ -33,7 +33,7 @@ export default async function LeadManager() {
             ))}
           </TableBody>
         </Table>
-        <div>
+        <div className="mt-10">
           <CompanyForm company={company[0]} />
         </div>
       </div>
