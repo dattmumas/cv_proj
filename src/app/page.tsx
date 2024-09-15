@@ -21,7 +21,7 @@ export default function Home() {
               </CardContent>
               <CardContent>
                 <p>
-                I’m also passionate about software and product development, as a self-taught software developer I have developed several of my own projects over the years. Please explore the products I’ve developed with startups and investors in mind.
+                I’m also passionate about software and product development, as a self-taught software developer I have created several of my own projects over the years. Please take a look at the products I’ve developed with VC and investors in mind.
                 </p>
               </CardContent>
               <Button asChild variant='outline'>

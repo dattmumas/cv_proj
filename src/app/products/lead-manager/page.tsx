@@ -1,11 +1,24 @@
+
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 import Navbar from "@/components/navbar";
-import { leadCompany } from "@/lib/definitions";
 import { fetchCompany } from "@/lib/data";
-import CompanyForm from "@/components/forms/create-company";
+import { unstable_noStore as noStore } from "next/cache";
+import{ AddCompany } from "@/app/products/lead-manager/forms/add-company";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { AddCompanyDialog } from "./components/add-company-dialog";
+
 
 export default async function LeadManager() {
-  const company: leadCompany[] = await fetchCompany();
+  noStore();
+  const company = await fetchCompany();
 
   return (
     <div>
@@ -33,9 +46,7 @@ export default async function LeadManager() {
             ))}
           </TableBody>
         </Table>
-        <div className="mt-10">
-          <CompanyForm company={company[0]} />
-        </div>
+        <AddCompanyDialog />
       </div>
     </div>
   );
