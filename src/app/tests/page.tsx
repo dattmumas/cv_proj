@@ -3,11 +3,6 @@ import { DeleteForm } from "./delete-form";
 import { fetchTodos } from "./actions";
 import { unstable_noStore as noStore } from "next/cache";
 
-type todos = {
-    id: number;
-    text: string;
-  };
-
 export default async function Home() {
     noStore();
     const todos = await fetchTodos();

@@ -8,7 +8,6 @@ const initialState = {
     message: "",
 };
 
-// Styled Components for the form and inputs with reduced size
 const Form = styled.form`
     display: flex;
     flex-direction: column;
@@ -99,7 +98,7 @@ function SubmitButton() {
 
 export function AddCompany() {
     const [state, formAction] = useFormState(createCompany, initialState);
-
+    console.log(state);
     return (
         <Form action={formAction}>
             <Label htmlFor="companyname">Company Name</Label>

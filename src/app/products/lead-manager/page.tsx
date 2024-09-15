@@ -3,16 +3,6 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@
 import Navbar from "@/components/navbar";
 import { fetchCompany } from "@/lib/data";
 import { unstable_noStore as noStore } from "next/cache";
-import{ AddCompany } from "@/app/products/lead-manager/forms/add-company";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import { AddCompanyDialog } from "./components/add-company-dialog";
 
 
